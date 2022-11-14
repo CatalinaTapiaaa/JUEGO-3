@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.812416
+  orthographic size: 18
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -200,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1, y: 4.5, z: -10}
+  m_LocalPosition: {x: 5.1, y: 8.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -473,7 +473,7 @@ MonoBehaviour:
   columns: 10
   GridPrefab: {fileID: 1362061287878328471, guid: dd3224f36ac09fc4496a5044f8f94f51, type: 3}
   LeftButtom: {x: 1, y: 0, z: 0}
-  scale: 2
+  scale: 2.5
   players:
   - {fileID: 988399464}
   enemies:
