@@ -466,14 +466,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1045772031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b8c1dda1203bf4b8510cacdf9c3877, type: 3}
+  m_Script: {fileID: 11500000, guid: b2392d5ae80883b4d9c021b5f0e9b8b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rowa: 10
   columns: 10
-  GridPrefab: {fileID: 1920940036616355162, guid: 5aff5344d3828cd4b8d8b70d9c5811a7, type: 3}
-  LeftButtom: {x: 0, y: 0, z: 0}
-  scale: 1.5
+  GridPrefab: {fileID: 1362061287878328471, guid: dd3224f36ac09fc4496a5044f8f94f51, type: 3}
+  LeftButtom: {x: 1, y: 0, z: 0}
+  scale: 2
   players:
   - {fileID: 988399464}
   enemies:
