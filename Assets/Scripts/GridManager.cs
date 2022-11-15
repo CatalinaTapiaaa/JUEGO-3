@@ -12,10 +12,42 @@ public class GridManager : MonoBehaviour
     public GameObject[,] gridArray;
     public List<GameObject> players, enemies;
     public List<Vector2Int> playerPos, enemiesPos;
-    
+    public Vector3 posicion;
+    private GameObject PlayerPrefab;
+    private GameObject indicator;
+    public bool eligio = false;
 
 
-    
+    private void OnDisable()
+    {
+        Player.OnPlayerTurnChanges -= Player_onPLayerTurnChanges;
+    }
+
+    private void OnEnable()
+    {
+        Player.OnPlayerTurnChanges += Player_onPLayerTurnChanges;
+    }
+    private void Player_onPLayerTurnChanges(bool isPlayerturn)
+    {
+        indicator?.SetActive(isPlayerturn);
+    }
+    public void OnMouseDown()
+    {
+        if (eligio == false)
+        {
+            if (Player.instance.TryToPlay())
+            {
+                Instantiate(PlayerPrefab, posicion, transform.rotation);
+                Gamemanager.instance.PlayerTurnFinish();
+            }
+        }
+    }
+    public void ConsumeResources(bool consumebyPlayer)
+    {
+        GetComponent<SpriteRenderer>().material.color = consumebyPlayer == true ? Color.blue : Color.red;
+        eligio = true;
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
