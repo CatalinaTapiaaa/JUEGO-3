@@ -47,10 +47,14 @@ public class GridManager : MonoBehaviour
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log("Detecte el mouse");
-            if (eligio == false)
+
+           
+
+            if (eligio ==false)
             {
                 Instantiate(PlayerPrefab, posicion, transform.rotation);
             }
+
         }
     }
     void GeneratorGrid()
