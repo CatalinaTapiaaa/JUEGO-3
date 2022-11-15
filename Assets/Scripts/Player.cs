@@ -5,40 +5,20 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public delegate void FNotifyPlayerTurn(bool isPlayerTurn);
-    public static event FNotifyPlayerTurn OnPlayerTurnChanges;
-
-    public static Player instance;
-    public Text Playertextturn;
-    public Text InicioText;
-    public int rounds = 100;
-    public Text RoundText;
-
+   
     public bool IsmyTurn;
-    public bool TryToPlay()
-    {
-        if (IsmyTurn == false)
-        {
-            InicioText.enabled = true;
-            RoundText.enabled = false;
-            RoundText.text = rounds.ToString();
+    public bool TryToPlay;
 
 
-            Playertextturn.enabled = true;
-            return false;
-        }
-        IsmyTurn = false;
-        OnPlayerTurnChanges?.Invoke(false);
-        return true;
-    }
-    private void Awake()
+    private void Start()
     {
-        instance = this;
+        
     }
-    public void ResetPlayerTurn()
+
+
+    private void Update()
     {
-        OnPlayerTurnChanges?.Invoke(false);
-        IsmyTurn = true;
-        Playertextturn.enabled = true;
+        
     }
+
 }

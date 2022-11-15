@@ -13,31 +13,5 @@ public class Enemy : MonoBehaviour
        
     }
 
-    public void DoEnemyAction()
-    {
-        StartCoroutine(Enemyturn());
-    }
-    IEnumerator Enemyturn()
-    {
-
-        
-
-
-            Gamemanager.instance.EnemyTurnText.enabled = true;
-        
-
-
-        if (DistancePlayer <= 5f)
-        {
-            
-
-        }
-        yield return new WaitForSeconds(0.5f);
-
-        Gamemanager.instance.EnemyTurnFinish(this);
-        Gamemanager.instance.EnemyTurnText.enabled = false;
-
-
-
-    }
+  
 }

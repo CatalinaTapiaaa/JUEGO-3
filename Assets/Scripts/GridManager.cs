@@ -13,41 +13,13 @@ public class GridManager : MonoBehaviour
     public List<GameObject> players, enemies;
     public List<Vector2Int> playerPos, enemiesPos;
     public Vector3 posicion;
-    private GameObject PlayerPrefab;
-    private GameObject indicator;
+    public GameObject PlayerPrefab;
     public bool eligio = false;
 
 
-    private void OnDisable()
-    {
-        Player.OnPlayerTurnChanges -= Player_onPLayerTurnChanges;
-    }
-
-    private void OnEnable()
-    {
-        Player.OnPlayerTurnChanges += Player_onPLayerTurnChanges;
-    }
-    private void Player_onPLayerTurnChanges(bool isPlayerturn)
-    {
-        indicator?.SetActive(isPlayerturn);
-    }
-    public void OnMouseDown()
-    {
-        if (eligio == false)
-        {
-            if (Player.instance.TryToPlay())
-            {
-                Instantiate(PlayerPrefab, posicion, transform.rotation);
-                Gamemanager.instance.PlayerTurnFinish();
-            }
-        }
-    }
-    public void ConsumeResources(bool consumebyPlayer)
-    {
-        GetComponent<SpriteRenderer>().material.color = consumebyPlayer == true ? Color.blue : Color.red;
-        eligio = true;
-        
-    }
+    
+   
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +43,15 @@ public class GridManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log("Detecte el mouse");
+            if (eligio == false)
+            {
+                Instantiate(PlayerPrefab, posicion, transform.rotation);
+            }
+        }
     }
     void GeneratorGrid()
     {
@@ -102,4 +82,6 @@ public class GridManager : MonoBehaviour
 
         return new Vector2Int(x,y);
     }
+
+ 
 }
