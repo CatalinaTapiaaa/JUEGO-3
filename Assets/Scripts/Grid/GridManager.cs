@@ -12,14 +12,14 @@ public class GridManager : MonoBehaviour
     public GameObject[,] gridArray;
     public List<GameObject> players, enemies;
     public List<Vector2Int> playerPos, enemiesPos;
+    public bool selected = false;
+
     public Vector3 posicion;
-    public GameObject PlayerPrefab;
-    public bool eligio = false;
 
 
-    
-   
-    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,27 +35,17 @@ public class GridManager : MonoBehaviour
             enemiesPos.Add(Vector2Int.zero);
         }
 
-        playerPos[0] = Place(players[0], 0,0, false, Vector2Int.zero);
-        enemiesPos[0] = Place(enemies[0],0,1, false, Vector2Int.zero);
+        playerPos[0] = Place(players[0], 0, 0, false, Vector2Int.zero);
+        enemiesPos[0] = Place(enemies[0], 0, 1, false, Vector2Int.zero);
 
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("Detecte el mouse");
+        OnMouseDown();
 
-           
-
-            if (eligio ==false)
-            {
-                Instantiate(PlayerPrefab, posicion, transform.rotation);
-            }
-
-        }
     }
     void GeneratorGrid()
     {
@@ -65,12 +55,13 @@ public class GridManager : MonoBehaviour
             for (int j = 0; j < rowa; j++)
             {
                 GameObject obj = Instantiate(GridPrefab);
-                obj.transform.position = new Vector3(0 + scale*i, 0+scale*j, 0);
+                obj.transform.position = new Vector3(0 + scale * i, 0 + scale * j, 0);
                 GridStat gs = obj.GetComponent<GridStat>();
                 gs.x = i;
                 gs.y = j;
                 obj.transform.SetParent(gameObject.transform);
                 gridArray[i, j] = obj;
+               
             }
         }
     }
@@ -80,12 +71,27 @@ public class GridManager : MonoBehaviour
         if (lastP)
         {
             gridArray[lPos.x, lPos.y].GetComponent<GridStat>().visited = -1;
+            
+            Debug.Log(playerPos);
         }
         pawn.transform.position = new Vector3(gridArray[x, y].transform.position.x, gridArray[x, y].transform.position.y, 1);
         gridArray[x, y].GetComponent<GridStat>().visited = 1;
 
-        return new Vector2Int(x,y);
+
+      
+        return new Vector2Int(x, y);
     }
 
- 
+
+    private void OnMouseDown()
+    {
+        posicion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(posicion, Vector2.zero);
+        if(hit.collider != null)
+        {
+            Debug.Log(hit.collider.gameObject.name);
+        }
+      
+    }
+
 }

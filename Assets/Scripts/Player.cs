@@ -6,10 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
    
-    public bool IsmyTurn;
-    public bool TryToPlay;
-
-
+   
     private void Start()
     {
         
