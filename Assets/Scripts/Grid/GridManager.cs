@@ -13,6 +13,9 @@ public class GridManager : MonoBehaviour
     public List<GameObject> players, enemies;
     public List<Vector2Int> playerPos, enemiesPos;
     public bool selected = false;
+    public Plane Plane;
+    public GameObject Playerprefab;
+    public float DistanciaenZ;
 
     public Vector3 posicion;
 
@@ -90,6 +93,9 @@ public class GridManager : MonoBehaviour
         if(hit.collider != null)
         {
             Debug.Log(hit.collider.gameObject.name);
+            
+
+
         }
       
     }
