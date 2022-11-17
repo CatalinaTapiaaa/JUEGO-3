@@ -667,6 +667,7 @@ GameObject:
   - component: {fileID: 1045772033}
   - component: {fileID: 1045772032}
   - component: {fileID: 1045772034}
+  - component: {fileID: 1045772035}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -716,7 +717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rowa: 10
   columns: 10
-  GridPrefab: {fileID: 1362061287878328471, guid: dd3224f36ac09fc4496a5044f8f94f51, type: 3}
+  GridPrefab: {fileID: 2001705341934625808, guid: 0209a14579ab13347a8afc2752ac2d8a, type: 3}
   LeftButtom: {x: 1, y: 0, z: 0}
   scale: 2.5
   players:
@@ -727,8 +728,50 @@ MonoBehaviour:
   enemiesPos: []
   selected: 0
   Playerprefab: {fileID: 988399464}
-  DistanciaenZ: 0
+  material: {fileID: 0}
   posicion: {x: 0, y: 0, z: 0}
+--- !u!23 &1045772035
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045772031}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1426855417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,8 +1192,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062419420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3444, y: 8.0338, z: 0}
-  m_LocalScale: {x: 66.82208, y: -35.46361, z: 1}
+  m_LocalPosition: {x: 6.3444, y: 8.5215, z: 0}
+  m_LocalScale: {x: 66.82208, y: -36.43886, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

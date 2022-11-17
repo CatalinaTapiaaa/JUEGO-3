@@ -15,8 +15,9 @@ public class GridManager : MonoBehaviour
     public bool selected = false;
     public Plane Plane;
     public GameObject Playerprefab;
-    public float DistanciaenZ;
 
+    public Material material;
+    
     public Vector3 posicion;
 
 
@@ -41,7 +42,8 @@ public class GridManager : MonoBehaviour
         playerPos[0] = Place(players[0], 0, 0, false, Vector2Int.zero);
         enemiesPos[0] = Place(enemies[0], 0, 1, false, Vector2Int.zero);
 
-        
+     
+        material = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -64,7 +66,8 @@ public class GridManager : MonoBehaviour
                 gs.y = j;
                 obj.transform.SetParent(gameObject.transform);
                 gridArray[i, j] = obj;
-               
+                
+
             }
         }
     }
@@ -93,8 +96,9 @@ public class GridManager : MonoBehaviour
         if(hit.collider != null)
         {
             Debug.Log(hit.collider.gameObject.name);
-            
 
+            material.color = Color.blue;
+           
 
         }
       
