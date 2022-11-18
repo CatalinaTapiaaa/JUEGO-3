@@ -16,8 +16,10 @@ public class GridManager : MonoBehaviour
     public Plane Plane;
     public GameObject Playerprefab;
 
-    public Material material;
-    
+    public Material materialCubo;
+    public Material ColorMov;
+    public Material otroColor;
+
     public Vector3 posicion;
 
 
@@ -42,66 +44,64 @@ public class GridManager : MonoBehaviour
         playerPos[0] = Place(players[0], 0, 0, false, Vector2Int.zero);
         enemiesPos[0] = Place(enemies[0], 0, 1, false, Vector2Int.zero);
 
-     
-        material = GetComponent<Renderer>().material;
-    }
+        materialCubo = GetComponent<Renderer>().material;
 
-    // Update is called once per frame
-    void Update()
-    {
-        OnMouseDown();
 
-    }
-    void GeneratorGrid()
-    {
-        gridArray = new GameObject[columns, rowa];
-        for (int i = 0; i < columns; i++)
+        // Update is called once per frame
+        void Update()
         {
-            for (int j = 0; j < rowa; j++)
-            {
-                GameObject obj = Instantiate(GridPrefab);
-                obj.transform.position = new Vector3(0 + scale * i, 0 + scale * j, 0);
-                GridStat gs = obj.GetComponent<GridStat>();
-                gs.x = i;
-                gs.y = j;
-                obj.transform.SetParent(gameObject.transform);
-                gridArray[i, j] = obj;
-                
+            OnMouseDown();
 
+        }
+        void GeneratorGrid()
+        {
+            gridArray = new GameObject[columns, rowa];
+            for (int i = 0; i < columns; i++)
+            {
+                for (int j = 0; j < rowa; j++)
+                {
+                    GameObject obj = Instantiate(GridPrefab);
+                    obj.transform.position = new Vector3(0 + scale * i, 0 + scale * j, 0);
+                    GridStat gs = obj.GetComponent<GridStat>();
+                    gs.x = i;
+                    gs.y = j;
+                    obj.transform.SetParent(gameObject.transform);
+                    gridArray[i, j] = obj;
+                    materialCubo.color = Color.blue;
+                }
             }
         }
-    }
 
-    Vector2Int Place(GameObject pawn, int x, int y, bool lastP, Vector2Int lPos)
-    {
-        if (lastP)
+        Vector2Int Place(GameObject pawn, int x, int y, bool lastP, Vector2Int lPos)
         {
-            gridArray[lPos.x, lPos.y].GetComponent<GridStat>().visited = -1;
-            
-            Debug.Log(playerPos);
+            if (lastP)
+            {
+                gridArray[lPos.x, lPos.y].GetComponent<GridStat>().visited = -1;
+
+                Debug.Log(playerPos);
+            }
+            pawn.transform.position = new Vector3(gridArray[x, y].transform.position.x, gridArray[x, y].transform.position.y, 1);
+            gridArray[x, y].GetComponent<GridStat>().visited = 1;
+
+
+
+            return new Vector2Int(x, y);
         }
-        pawn.transform.position = new Vector3(gridArray[x, y].transform.position.x, gridArray[x, y].transform.position.y, 1);
-        gridArray[x, y].GetComponent<GridStat>().visited = 1;
 
 
-      
-        return new Vector2Int(x, y);
-    }
+         void OnMouseDown()
+         {
+            posicion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(posicion, Vector2.zero);
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.gameObject.name);
 
 
-    private void OnMouseDown()
-    {
-        posicion = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(posicion, Vector2.zero);
-        if(hit.collider != null)
-        {
-            Debug.Log(hit.collider.gameObject.name);
 
-            material.color = Color.blue;
-           
+            }
 
         }
-      
-    }
 
+    }
 }

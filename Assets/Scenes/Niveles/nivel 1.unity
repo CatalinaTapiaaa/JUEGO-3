@@ -728,7 +728,9 @@ MonoBehaviour:
   enemiesPos: []
   selected: 0
   Playerprefab: {fileID: 988399464}
-  material: {fileID: 0}
+  materialCubo: {fileID: 2100000, guid: 3da3d1f73a2488f4f9d11d5ee12d56f3, type: 2}
+  ColorMov: {fileID: 2100000, guid: c3a6ebf09070f2047a01e11ea8fe85a9, type: 2}
+  otroColor: {fileID: 2100000, guid: 7cb04936ecac82b4a8b68093bf061078, type: 2}
   posicion: {x: 0, y: 0, z: 0}
 --- !u!23 &1045772035
 MeshRenderer:
@@ -750,7 +752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 3da3d1f73a2488f4f9d11d5ee12d56f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
