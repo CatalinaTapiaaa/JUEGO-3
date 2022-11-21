@@ -728,10 +728,15 @@ MonoBehaviour:
   enemiesPos: []
   selected: 0
   Playerprefab: {fileID: 988399464}
+  fase: 0
   materialCubo: {fileID: 2100000, guid: 3da3d1f73a2488f4f9d11d5ee12d56f3, type: 2}
   ColorMov: {fileID: 2100000, guid: c3a6ebf09070f2047a01e11ea8fe85a9, type: 2}
   otroColor: {fileID: 2100000, guid: 7cb04936ecac82b4a8b68093bf061078, type: 2}
+  selectedObject: {fileID: 0}
   posicion: {x: 0, y: 0, z: 0}
+  currentP: {fileID: 0}
+  lastElement: {fileID: 0}
+  lastElementColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &1045772035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -866,7 +871,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1715693247}
   - component: {fileID: 1715693246}
-  - component: {fileID: 1715693248}
+  - component: {fileID: 1715693249}
+  - component: {fileID: 1715693250}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -941,7 +947,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1715693248
+--- !u!135 &1715693249
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715693245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1715693250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -950,11 +969,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1715693245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5c7673d50aa6240bd85af9b66ad47a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b88d514505dd944990136e880e852c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemyprefab: {fileID: 2212892962050920535, guid: f68218faca0135b439da50a9cc45173d, type: 3}
-  DistancePlayer: 5
+  PosX: 0
+  PosY: 0
+  fase: 1
+  finished: 0
+  Move: []
 --- !u!1 &1772602095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1235,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: gridStat
+      value: 
+      objectReference: {fileID: 5266626594232708976, guid: 0209a14579ab13347a8afc2752ac2d8a, type: 3}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
       propertyPath: RoundText
       value: 
       objectReference: {fileID: 1908719139}
@@ -1224,6 +1250,34 @@ PrefabInstance:
       propertyPath: Playertextturn
       value: 
       objectReference: {fileID: 1426855419}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.data[0].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.data[1].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.data[2].x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.data[3].y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.data[4].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2279011080981000656, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
+      propertyPath: Move.Array.data[4].y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2279011080981000657, guid: 3181242701e4cbc4aa4f65add627bb39, type: 3}
       propertyPath: m_RootOrder
       value: 2
