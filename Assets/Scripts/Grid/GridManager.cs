@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
@@ -22,9 +23,11 @@ public class GridManager : MonoBehaviour
     public GameObject selectedObject;
     public Vector3 posicion;
     public Player currentP;
-    
+    public Color enemyColor;
     public GameObject lastElement;
     public Color lastElementColor;
+    public Text textoPlayer;
+
 
 
 
@@ -46,13 +49,15 @@ public class GridManager : MonoBehaviour
 
         playerPos[0] = Place(players[0], 0, 0, false, Vector2Int.zero);
         enemiesPos[0] = Place(enemies[0], 0, 1, false, Vector2Int.zero);
+        textoPlayer.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-            OnMouseDown();
+        OnMouseDown();
         TurnPlayer();
+        
     }
     
     void GeneratorGrid()
@@ -116,6 +121,7 @@ public class GridManager : MonoBehaviour
                         lastElement.transform.GetComponent<SpriteRenderer>().color = lastElementColor;
                         lastElement = hitData.transform.gameObject;
                         lastElementColor = currentColor;
+                        textoPlayer.enabled = false;
                     }
                 }
                 else
@@ -127,7 +133,7 @@ public class GridManager : MonoBehaviour
                     lastElementColor = currentColor;
                 }
                 
-                //Debug.Log(hitData.transform.gameObject.name);
+                
             }
             
         }
@@ -180,7 +186,8 @@ public class GridManager : MonoBehaviour
                     Debug.Log((moves[i].x + gs.x) + " " + (moves[i].y + gs.y));
                     gridArray[(moves[i].x + gs.x), (moves[i].y + gs.y)].GetComponent<SpriteRenderer>().color = Color.yellow;
                     gridArray[(moves[i].x + gs.x), (moves[i].y + gs.y)].GetComponent<GridStat>().aviableMove = true;
-                    /// click del mouse y te mueves la casiilla disponible 
+                    
+                    
 
                 }
                 currentP = Jugadores[new Vector2Int(gs.x, gs.y)].GetComponent<Player>();
@@ -197,12 +204,14 @@ public class GridManager : MonoBehaviour
             {
                 gridArray[i, j].GetComponent<SpriteRenderer>().color = Color.white;
                 gridArray[i, j].GetComponent<GridStat>().aviableMove = false;
+               
 
-                //materialCubo.color = Color.blue;
+                
             }
         }
     }
 
+ 
    
 
     private void OnDrawGizmosSelected()

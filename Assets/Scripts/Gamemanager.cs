@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Gamemanager : MonoBehaviour
 {
     public static Gamemanager instance;
-
-
+  
 
     private void Start()
     {
@@ -20,4 +19,7 @@ public class Gamemanager : MonoBehaviour
     {
         
     }
+
+
+    
 }  

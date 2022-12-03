@@ -559,7 +559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &910212014
 RectTransform:
   m_ObjectHideFlags: 0
@@ -735,8 +735,10 @@ MonoBehaviour:
   selectedObject: {fileID: 0}
   posicion: {x: 0, y: 0, z: 0}
   currentP: {fileID: 0}
+  enemyColor: {r: 1, g: 0.08962262, b: 0.08962262, a: 0}
   lastElement: {fileID: 0}
   lastElementColor: {r: 0, g: 0, b: 0, a: 0}
+  textoPlayer: {fileID: 1426855419}
 --- !u!23 &1045772035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -994,7 +996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1772602096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1076,7 +1078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1908719138
 RectTransform:
   m_ObjectHideFlags: 0
