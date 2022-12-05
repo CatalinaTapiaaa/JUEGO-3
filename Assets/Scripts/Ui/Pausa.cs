@@ -18,30 +18,15 @@ public class Pausa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.P))
-        {
-            Menuon = !Menuon;
-        }
-        if (Menuon == true)
-        {
-            PauseMenuUI.SetActive(true);
-
-
-
-        }
-        else
-        {
-            PauseMenuUI.SetActive(false);
-
-
-        }
+       
+        
     }
 
     public void Continuar()
     {
         PauseMenuUI.SetActive(false);
 
-        Menuon = false;
+        Menuon = true;
     }
     public void QuitButton()
     {

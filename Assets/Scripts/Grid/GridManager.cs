@@ -58,6 +58,7 @@ public class GridManager : MonoBehaviour
         OnMouseDown();
         TurnPlayer();
         
+        // Debug.Log();
     }
     
     void GeneratorGrid()

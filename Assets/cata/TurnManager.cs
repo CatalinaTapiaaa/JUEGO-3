@@ -17,6 +17,7 @@ public class TurnManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+        // Debug.Log("current turn " + turnKey.Count);
         if (turnTeam.Count == 0)
         {
             InitTeamTurnQueue();
