@@ -92,10 +92,10 @@ public class GridManager : MonoBehaviour
             pawn.transform.position = new Vector3(gridArray[x, y].transform.position.x, gridArray[x, y].transform.position.y, 1);
             gridArray[x, y].GetComponent<GridStat>().visited = 1;
             Jugadores[new Vector2Int(x, y)] = pawn;
-        pawn.GetComponent<Player>().PosX = x;
-        pawn.GetComponent<Player>().PosY = y;
+            pawn.GetComponent<Player>().PosX = x;
+            pawn.GetComponent<Player>().PosY = y;
 
-        return new Vector2Int(x, y);
+            return new Vector2Int(x, y);
     }
 
 
