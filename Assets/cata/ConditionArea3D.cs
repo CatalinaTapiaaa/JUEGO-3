@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class ConditionArea3D : MonoBehaviour
+public class ConditionArea3D
+    : MonoBehaviour
 {
     [SerializeField] bool useTag;
     [SerializeField] string tagID;

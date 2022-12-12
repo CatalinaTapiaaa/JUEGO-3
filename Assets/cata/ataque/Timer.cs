@@ -11,7 +11,6 @@ public class Timer : MonoBehaviour
     private float restante;
     private bool enMarcha;
     public GameObject objeto;
-    public Timer timer2;
 
 
     private void OnEnable()
@@ -29,7 +28,6 @@ public class Timer : MonoBehaviour
             if (restante < 0)
             {
                 objeto.gameObject.SetActive (true);
-                timer2.enabled = true;
                 this.enabled = false;
 
 

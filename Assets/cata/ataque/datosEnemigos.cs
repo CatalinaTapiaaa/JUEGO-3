@@ -8,7 +8,7 @@ public class datosEnemigos : MonoBehaviour
 
     private void Update()
     {
-        if(vidaEnemigo ==0)
+        if(vidaEnemigo <= 0)
         {
             Destroy(gameObject);
         }

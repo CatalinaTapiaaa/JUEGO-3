@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ActivarPanel : MonoBehaviour
+public class ActivarPanelGameOver : MonoBehaviour
 {
-    public Text EnemiesCount;
     public GameObject[] Enemies;
- 
+    public GameObject activar;
+    public GameObject activar2;
+    public GameObject desactivar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +20,13 @@ public class ActivarPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Enemies = GameObject.FindGameObjectsWithTag("NPC");
-        EnemiesCount.text = "NPC" + Enemies.Length.ToString();
-
+        Enemies = GameObject.FindGameObjectsWithTag("Pla");
 
         if (Enemies.Length <= 0)
         {
-            SceneManager.LoadScene("VictoryPanel");
+            activar.SetActive(true);
+            activar2.SetActive(true);
+            desactivar.SetActive(false);
         }
     }
 }

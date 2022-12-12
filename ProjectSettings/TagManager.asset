@@ -8,6 +8,8 @@ TagManager:
   - Tile
   - NPC
   - Enemigo
+  - Ene
+  - Pla
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ataque
+    uniqueID: 3779910745
+    locked: 0
+  - name: negro
+    uniqueID: 1254481369
+    locked: 0
+  - name: ui
+    uniqueID: 796665871
     locked: 0
