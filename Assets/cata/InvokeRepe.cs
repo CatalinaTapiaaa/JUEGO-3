@@ -33,7 +33,7 @@ public class InvokeRepe : MonoBehaviour
         ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
         ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
         ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10);
 
     }
 }
