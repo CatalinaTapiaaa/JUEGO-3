@@ -5,9 +5,17 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    /// <summary>
+    /// Numero entero de minutos y segundos 
+    /// </summary>
     [SerializeField] int min, seg;
+    /// <summary>
+    ///  un texto llamado tiempo
+    /// </summary>
     [SerializeField] Text tiempo;
-
+    /// <summary>
+    /// 
+    /// </summary>
     private float restante;
     private bool enMarcha;
     public GameObject objeto;
@@ -32,7 +40,7 @@ public class Timer : MonoBehaviour
 
 
             }
-            int tempMin =Mathf.FloorToInt(restante / 60);
+            int tempMin = Mathf.FloorToInt(restante / 60);
             int tempSeg = Mathf.FloorToInt(restante % 60);
             tiempo.text = string.Format("{00:00}:{01:00}",tempMin, tempSeg);
         }
