@@ -16,6 +16,24 @@ public class InvokeRepe : MonoBehaviour
         ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
         ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
         ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+       
+
+    }
+    private void Update()
+    {
+        StartCoroutine(ResetInvoKe());
+    }
+    IEnumerator ResetInvoKe()
+    {
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        yield return new WaitForSeconds(5f);
 
     }
 }
