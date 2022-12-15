@@ -8,6 +8,7 @@ public class DatosJugador : MonoBehaviour
 {
     public int vidaPlayer;
     public Slider vidaVisual;
+    public GameObject imagen;
 
     private void Update()
     {
@@ -16,6 +17,7 @@ public class DatosJugador : MonoBehaviour
         if(vidaPlayer <= 0)
         {
             Destroy(gameObject);
+            imagen.SetActive(false);
         }
     }
 

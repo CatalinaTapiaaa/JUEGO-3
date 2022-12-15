@@ -2174,7 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: 0
-  seg: 5
+  seg: 1
   tiempo: {fileID: 0}
   objeto: {fileID: 1121369273}
 --- !u!4 &187365572
@@ -3615,6 +3615,90 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408858099}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &412704499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412704500}
+  - component: {fileID: 412704501}
+  m_Layer: 0
+  m_Name: da_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412704500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412704499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 0.20637982, y: 0.20637982, z: 0.20638886}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 825871698}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &412704501
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412704499}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 796665871
+  m_SortingLayer: 3
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -585486627, guid: 70e5af62b9923c54298a6016ca8efcd0, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.41, y: 3.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &430839222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5529,6 +5613,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 705114558}
+  - {fileID: 412704500}
   m_Father: {fileID: 402189017}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6918,7 +7003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   min: 0
-  seg: 5
+  seg: 1
   tiempo: {fileID: 0}
   objeto: {fileID: 329792492}
 --- !u!4 &976756148
@@ -11169,7 +11254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: 0
   moving: 1
-  move: 3
+  move: 50
   jumpHeight: 0
   moveSpeed: 10
   jumpVelocity: 0
@@ -11267,6 +11352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemigo: 1
+  imagen: {fileID: 1656714887}
 --- !u!54 &1545058678
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14505,7 +14591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: 1
   moving: 0
-  move: 30
+  move: 50
   jumpHeight: 0
   moveSpeed: 10
   jumpVelocity: 0
@@ -14524,6 +14610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaPlayer: 10
   vidaVisual: {fileID: 814599292}
+  imagen: {fileID: 1058602549}
 --- !u!54 &1878416072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15079,7 +15166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1499005374}
-  changeStateTime: 1
+  changeStateTime: 2
 --- !u!1 &1988745659
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
     public GameObject objeto;
 
 
+
     private void OnEnable()
     {
         restante = (min *60) + seg;
