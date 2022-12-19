@@ -8,32 +8,31 @@ public class InvokeRepe : MonoBehaviour
 
     void Start()
     {
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-       
+        StartCoroutine(ResetInvoKe());
 
     }
     private void Update()
     {
-        StartCoroutine(ResetInvoKe());
+        
     }
     IEnumerator ResetInvoKe()
     {
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
-        ObjectsList[Random.Range(0, ObjectsList.Length)].SetActive(true);
+        List<int> posibles = new List<int>();
+        for (int i = 0; i < ObjectsList.Length; i++)
+        {
+            ObjectsList[i].SetActive(false);
+            posibles.Add(i);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            int selected = Random.Range(0, posibles.Count);
+            ObjectsList[posibles[selected]].SetActive(true);
+            posibles.Remove(selected);
+        }
+
         yield return new WaitForSeconds(10);
+        ResetInvoKe();
 
     }
 }

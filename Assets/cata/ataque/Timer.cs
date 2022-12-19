@@ -43,7 +43,10 @@ public class Timer : MonoBehaviour
             }
             int tempMin = Mathf.FloorToInt(restante / 60);
             int tempSeg = Mathf.FloorToInt(restante % 60);
-            tiempo.text = string.Format("{00:00}:{01:00}",tempMin, tempSeg);
+            if(tiempo != null)
+            {
+                tiempo.text = string.Format("{00:00}:{01:00}", tempMin, tempSeg);
+            }
         }
     }
 }

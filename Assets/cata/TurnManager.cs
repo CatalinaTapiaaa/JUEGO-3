@@ -11,8 +11,10 @@ public class TurnManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
-	}
+        units = new Dictionary<string, List<TacticsMove>>();
+        turnKey = new Queue<string>();
+        turnTeam = new Queue<TacticsMove>();
+    }
 	
 	// Update is called once per frame
 	void Update () 

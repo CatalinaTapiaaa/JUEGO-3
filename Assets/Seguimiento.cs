@@ -21,6 +21,7 @@ public class Seguimiento : MonoBehaviour
         }
         */
         //else, if it is not in rage, it will not follow player
+        if(transform.position != null)
         transform.position = new Vector3(target.position.x, 5f, target.position.z);
     }
 }
