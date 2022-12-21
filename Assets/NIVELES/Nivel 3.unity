@@ -15647,7 +15647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1992382768}
-  timetoInvoke: 1
+  timetoInvoke: 5
   animation: {fileID: 2051245280}
 --- !u!1 &1884872350
 GameObject:
