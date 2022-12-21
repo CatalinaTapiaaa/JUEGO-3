@@ -10828,7 +10828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e66b32981e4c7498a16b2e529e5ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemigo: 1
+  vidaEnemigo: 20
   imagen: {fileID: 2071711384}
 --- !u!65 &1286487046
 BoxCollider:
