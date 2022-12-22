@@ -10828,7 +10828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e66b32981e4c7498a16b2e529e5ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemigo: 20
+  vidaEnemigo: 10
   imagen: {fileID: 2071711384}
 --- !u!65 &1286487046
 BoxCollider:
@@ -15193,6 +15193,10 @@ MonoBehaviour:
   - {fileID: 306996890}
   - {fileID: 1272117159}
   - {fileID: 1949404732}
+  Jefe: {fileID: 1286487043}
+  ataqueBoss: 4
+  Hpbossactual: 1
+  HpBossTotal: 20
 --- !u!1 &1850892613
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,5 +15,6 @@ public class datosEnemigos : MonoBehaviour
             imagen.SetActive(false);
 
         }
+        
     }
 }
