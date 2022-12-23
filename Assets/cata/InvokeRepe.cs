@@ -32,12 +32,14 @@ public class InvokeRepe : MonoBehaviour
             posibles.Add(i);
         }
 
-        for (int i = 0; i < 4+Mathf.Clamp(((HpBossTotal/Hpbossactual) - HpBossTotal) * 3, 0, 3)  ; i++)
+        for (int i = 0; i < 4 + Mathf.Clamp((1 - Hpbossactual / HpBossTotal ) * 3, 0, 3); i++)
+         
         {
             int selected = Random.Range(0, posibles.Count);
             ObjectsList[posibles[selected]].SetActive(true);
             posibles.RemoveAt(selected);
-            Debug.Log(HpBossTotal / Hpbossactual );
+            
+            Debug.Log(HpBossTotal / Hpbossactual) ;
 
             
           
