@@ -9,7 +9,8 @@ public class InvokeRepe : MonoBehaviour
     
     public int ataqueBoss;
     public int Hpbossactual;
-    public int HpBossTotal;
+    public float HpBossTotal;
+   
 
     void Start()
     {
@@ -31,14 +32,15 @@ public class InvokeRepe : MonoBehaviour
             posibles.Add(i);
         }
 
-        for (int i = 0; i < 4+Mathf.Clamp((HpBossTotal /Hpbossactual) * 3, 0, 3) ; i++)
+        for (int i = 0; i < 4+Mathf.Clamp(((HpBossTotal/Hpbossactual) - HpBossTotal) * 3, 0, 3)  ; i++)
         {
             int selected = Random.Range(0, posibles.Count);
             ObjectsList[posibles[selected]].SetActive(true);
-            posibles.Remove(selected);
-            Hpbossactual = Jefe.GetComponent<datosEnemigos>().vidaEnemigo;
+            posibles.RemoveAt(selected);
+            Debug.Log(HpBossTotal / Hpbossactual );
 
-            Debug.Log(Hpbossactual);
+            
+          
 
         }
         yield return new WaitForSeconds(10);

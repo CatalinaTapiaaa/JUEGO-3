@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1904
     height: 981
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -359,9 +359,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 41}
-    m_SelectedIDs: 92650000
-    m_LastClickedID: 26002
-    m_ExpandedIDs: 000000008c6500008e65000090650000926500009465000096650000986500009a65000000ca9a3b
+    m_SelectedIDs: 94650000
+    m_LastClickedID: 26004
+    m_ExpandedIDs: 000000008e65000090650000926500009465000096650000986500009a6500009c65000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,7 +389,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c6500008e65000090650000926500009465000096650000986500009a650000
+    m_ExpandedIDs: 000000008e65000090650000926500009465000096650000986500009a6500009c650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -519,21 +519,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: eec3ffff1cd4ffff3ce4ffff28fbffff4060000072620000
+      m_ExpandedIDs: 38b3fffff0cbffff28fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: ENEMIGOS
-        m_OriginalName: ENEMIGOS
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24640
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
