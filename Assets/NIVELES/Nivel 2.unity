@@ -5421,7 +5421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d670c3029c23554e9f13d9f33444759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: 0
+  turn: 1
   moving: 1
   move: 1
   jumpHeight: 0
@@ -12113,7 +12113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d670c3029c23554e9f13d9f33444759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: 0
+  turn: 1
   moving: 1
   move: 1
   jumpHeight: 0
@@ -15540,11 +15540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021417daf2659374092351964630208c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: 1
-  moving: 0
+  turn: 0
+  moving: 1
   move: 50
   jumpHeight: 0
-  moveSpeed: 10
+  moveSpeed: 30
   jumpVelocity: 0
   actualTargetTile: {fileID: 0}
 --- !u!114 &1878416071
