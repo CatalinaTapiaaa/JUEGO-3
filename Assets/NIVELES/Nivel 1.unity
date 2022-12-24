@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773f17e0465baef45b99b0b682cfc6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   Player: {fileID: 1878416065}
 --- !u!1 &157017859
 GameObject:
@@ -7649,7 +7649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1033043956
 Transform:
   m_ObjectHideFlags: 0
@@ -11112,7 +11112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1545058676}
   within_range: 0
-  speed: 10
+  speed: 5
 --- !u!1 &1531496710
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,7 +11609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e66b32981e4c7498a16b2e529e5ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaEnemigo: 5
+  vidaEnemigo: 4
   imagen: {fileID: 1656714887}
 --- !u!54 &1545058678
 Rigidbody:
@@ -15678,7 +15678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1992382769
 SpriteRenderer:
   m_ObjectHideFlags: 0
