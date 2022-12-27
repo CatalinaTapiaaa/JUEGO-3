@@ -14,10 +14,11 @@ public class DatosJugador : MonoBehaviour
     {
         vidaVisual.GetComponent<Slider>().value = vidaPlayer;
 
-        if(vidaPlayer <= 0)
+        if (vidaPlayer <= 0)
         {
             Destroy(gameObject);
             imagen.SetActive(false);
+
         }
     }
 
