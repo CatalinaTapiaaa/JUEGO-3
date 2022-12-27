@@ -12,6 +12,7 @@ public class dañoEnemigo : MonoBehaviour
         if (other.tag == "Enemigo")
         {
             Enemigo.GetComponent<datosEnemigos>().vidaEnemigo -= damage;
+
         }
     }
 }
